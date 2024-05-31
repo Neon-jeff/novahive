@@ -1,6 +1,7 @@
 {
   "expo": {
-    "name": "novehive",
+    "name": "novahive",
+    "scheme": "novehive",
     "slug": "novehive",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -21,10 +22,34 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.anonymous.novehive"
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "expo-router",
+      "expo-font",
+      [
+        "expo-build-properties",
+        {
+          "android": {
+            "kotlinVersion": "1.9.0"
+          }
+        }
+      ],
+       [
+        "expo-image-picker"
+      ]
+    ],
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "e7514a42-64f6-4085-9d8c-89ec45ed35dc"
+      }
     }
   }
 }
