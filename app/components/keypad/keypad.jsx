@@ -5,14 +5,18 @@ import {
   Pressable,
   TouchableOpacity,
 } from "react-native";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import DialPad from "./dialpad";
 import Icon from "../icons/lucide";
 
-const Keypad = () => {
+const Keypad = ({pinCheckMethod=()=>{}}) => {
   let keys = [1, 2, 3, 4, 5, 6, 7, 8, 9, "bio", 0, ""];
   let [pins, setPins] = useState([]);
-
+  useEffect(()=>{
+    if(pins.length==4){
+      pinCheckMethod()
+    }
+  },[pins])
   return (
     <View className="items-center gap-y-10   ">
       <View className="items-center gap-y-1">

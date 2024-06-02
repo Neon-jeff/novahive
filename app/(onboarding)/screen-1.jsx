@@ -17,6 +17,7 @@ import { router } from "expo-router";
 import { MotiView, MotiImage } from "moti";
 import OnBoardingScreenItem from "./OnBoardingScreenItem";
 import { Link } from "expo-router";
+import { SaveValue } from "../../local/localStore";
 
 const OnboardingScreenOne = () => {
   let [index, SetIndex] = useState(0);
@@ -88,6 +89,7 @@ const OnboardingScreenOne = () => {
             onPress={() => {
               if (index == 2) {
                 router.push("/(register)/account-type");
+                SaveValue('onboardingComplete',"true")
                 return;
               }
               SetIndex(index + 1);
@@ -103,7 +105,7 @@ const OnboardingScreenOne = () => {
           </Pressable>
         </View>
       </View>
-      <Link href={"(tabs)/home/home"} asChild>
+      <Link href={"(tabs)/home/"} asChild>
         <Pressable className="absolute right-5 top-16 px-5 py-2 rounded-full bg-blue-100">
           <Text className="font-psemibold text-lg text-primary">Skip</Text>
         </Pressable>

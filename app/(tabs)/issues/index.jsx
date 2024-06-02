@@ -1,11 +1,12 @@
 import { View, Text, Pressable,ScrollView } from "react-native";
 import React, { useState } from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
-import Back from "../components/Navigators/Back";
+import Back from "../../components/Navigators/Back";
 import { Button } from "react-native";
-import Icon from "../components/icons/lucide";
+import Icon from "../../components/icons/lucide";
 import { MotiView } from "moti";
-import IssuesCard from "../components/cards/IssuesCard";
+import IssuesCard from "../../components/cards/IssuesCard";
+import {Link, router} from 'expo-router'
 
 
 const Issues = () => {
@@ -25,13 +26,12 @@ const Issues = () => {
     },
   ];
   return (
-    <SafeAreaView className="px-5 pt-10 flex-1" style={{ gap: 17 }}>
+    <SafeAreaView className="px-5 pt-10 flex-1 bg-white" style={{ gap: 17 }}>
       <ScrollView
-        contentContainerStyle={{ gap: 10,paddingBottom:20 }}
+        contentContainerStyle={{ gap: 10, paddingBottom: 20 }}
         showsVerticalScrollIndicator={false}
-
       >
-        <Back path="home/home" />
+        <Back path="home/" />
         <Text className="text-2xl font-psemibold">Issues</Text>
         {/* <Pressable
         className="flex-row items-center justify-center self-start  p-3 rounded-full bg-primary "
@@ -68,13 +68,19 @@ const Issues = () => {
             </Pressable>
           ))}
         </View>
-        <IssuesCard />
-        <IssuesCard />
-        <IssuesCard />
+        <IssuesCard img={16} />
+        <IssuesCard img={18} />
+        <IssuesCard img={33} />
+        <IssuesCard img={38} />
       </ScrollView>
-      <View className="w-14 h-14 absolute right-4 z-10 bottom-10 bg-primary rounded-full items-center justify-center">
+      <Pressable
+        onPress={() => {
+          router.push("issues/create-issue");
+        }}
+        className="w-14 h-14 absolute right-4 z-10 bottom-10 bg-primary rounded-full items-center justify-center"
+      >
         <Icon name={"PencilLine"} size={25} color={"white"} strokeWidth={1.8} />
-      </View>
+      </Pressable>
     </SafeAreaView>
   );
 };

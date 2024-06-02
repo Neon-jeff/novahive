@@ -16,10 +16,9 @@ import { useWeb3Modal } from "@web3modal/wagmi-react-native";
 import { useAccount, useDisconnect } from "wagmi";
 const ConnectWallet = () => {
   const { disconnect } = useDisconnect();
-  const [firstConnectWallet, setFirstConnectWallet] = useState(true);
   const { isConnected, isConnecting } = useAccount({
     onConnect() {
-      setFirstConnectWallet(true);
+      // router.push('create-pin')
     },
   });
   const { open, close } = useWeb3Modal();
@@ -27,11 +26,7 @@ const ConnectWallet = () => {
   const handlePress = async () => {
     await open();
   };
-  useEffect(() => {
-    if (isConnected && firstConnectWallet) {
-      router.push("create-pin");
-    }
-  }, [isConnected]);
+
   return (
     <SafeAreaView className="px-8 bg-white flex-1 py-5 gap-y-10">
       <TouchableOpacity
@@ -50,7 +45,7 @@ const ConnectWallet = () => {
             Securely create your identity by adding your wallet
           </Text>
         </View>
-        <View className="w-full items-center">
+        <View className="w-full items-center" style={{ gap: 20 }}>
           <Button
             style=""
             text={isConnected ? "Disconnect Wallet" : "Connect Wallet"}
@@ -58,6 +53,7 @@ const ConnectWallet = () => {
               handlePress();
             }}
           />
+          {isConnected && <Button type="secondary" text={"Next"} action={()=>{router.push('create-pin')}} />}
         </View>
       </View>
     </SafeAreaView>

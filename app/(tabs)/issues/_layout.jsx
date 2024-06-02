@@ -2,7 +2,7 @@ import { View, Text } from "react-native";
 import React from "react";
 import { Stack } from "expo-router";
 
-const HomeRootNavigator = () => {
+const IssuesRootNavigator = () => {
   return (
     <Stack
       screenOptions={{
@@ -10,9 +10,9 @@ const HomeRootNavigator = () => {
       }}
     >
       <Stack.Screen name="index" />
-      <Stack.Screen name="notifications" />
+      <Stack.Screen name="create-issue" />
     </Stack>
   );
 };
 
-export default HomeRootNavigator;
+export default IssuesRootNavigator;

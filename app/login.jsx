@@ -2,8 +2,12 @@ import { View, Text, Image } from "react-native";
 import React from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
 import Keypad from "./components/keypad/keypad";
+import { router } from "expo-router";
 
 const Login = () => {
+  let pinCheckMethod=()=>{
+    router.push('/(tabs)/home')
+  }
   return (
     <SafeAreaView className="flex-1 justify-center items-center gap-y-10 px-5  bg-white">
       <View className="items-center gap-y-2">
@@ -22,7 +26,7 @@ const Login = () => {
         </View>
       </View>
       <View className="w-full">
-        <Keypad />
+        <Keypad pinCheckMethod={pinCheckMethod} />
       </View>
     </SafeAreaView>
   );

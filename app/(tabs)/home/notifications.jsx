@@ -89,7 +89,7 @@ const Notifications = () => {
         <View style={{ gap: 20 }}>
           {/* Top Bar */}
           <View className=" " style={{ gap: 20 }}>
-            <Back path="/home/home" />
+            <Back path="/home/" />
             <Text className="text-2xl font-psemibold">Notifications</Text>
           </View>
 

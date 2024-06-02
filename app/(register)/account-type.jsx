@@ -14,9 +14,13 @@ const AccountType = () => {
     >
       {/* illustration image */}
       <Image source={image} resizeMode="contain" className="w-full h-1/3" />
-      <View>
-        <Text className="text-2xl  font-psemibold text-primary">
+      <View className="w-4/5 ">
+        <Text className="text-2xl text-center font-psemibold text-primary">
           Select account type
+        </Text>
+        <Text className="text-center pt-4 text-base font-pregular">
+          You can register to find freelance jobs or hire amazing talents from
+          our platform
         </Text>
       </View>
       <View className=" flex-row justify-center  w-full items-center gap-x-5">
@@ -58,6 +62,7 @@ const AccountType = () => {
       </View>
       <Button
         text={"Continue"}
+        style="absolute bottom-10"
         action={() => {
           router.push("/(register)/connect-wallet");
         }}

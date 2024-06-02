@@ -16,7 +16,7 @@ const IssuesCard = ({ summary, username, status, votes, img }) => {
       </View>
       <View className=" self-start  gap-x-3">
         <Image
-          source={{ uri: "https://randomuser.me/api/portraits/men/75.jpg" }}
+          source={{ uri: `https://randomuser.me/api/portraits/men/${img}.jpg` }}
           className="w-16 rounded-full h-16"
           resizeMode="cover"
         />

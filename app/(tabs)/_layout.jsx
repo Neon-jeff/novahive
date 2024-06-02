@@ -127,6 +127,7 @@ const TabsLayout = () => {
           tabBarLabelStyle: { display: "none" },
         }}
       />
+
     </Tabs>
   );
 };
