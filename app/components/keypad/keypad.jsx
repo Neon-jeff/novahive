@@ -59,10 +59,9 @@ const Keypad = () => {
           alignItems: "center",
         }}
       />
-      <View className="gap-y-3 items-center">
-        <Text className="text-base font-pregular">Not your account?</Text>
+      <View className=" items-center">
         <Pressable>
-          <Text className="text-center font-pmedium text-base p-3 px-10 bg-blue-50 rounded-full  text-primary">
+          <Text className="text-center font-pmedium text-base p-4 px-10 bg-blue-50 rounded-xl  text-primary">
             Sign Out
           </Text>
         </Pressable>

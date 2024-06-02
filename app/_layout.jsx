@@ -74,6 +74,18 @@ const RootLayout = () => {
           }}
         />
         <Stack.Screen
+          name="no-auth"
+          options={{
+            headerShown: false,
+          }}
+        />
+        <Stack.Screen
+          name="loginPassword"
+          options={{
+            headerShown: false,
+          }}
+        />
+        <Stack.Screen
           name="connect-wallet"
           options={{
             headerShown: false,
@@ -83,7 +95,7 @@ const RootLayout = () => {
           name="(tabs)"
           options={{
             headerShown: false,
-            contentStyle:{backgroundColor:'white',height:'20%',}
+            contentStyle: { backgroundColor: "white", height: "20%" },
           }}
         />
         <Stack.Screen

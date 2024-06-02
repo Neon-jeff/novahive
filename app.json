@@ -8,8 +8,8 @@
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
     "splash": {
-      "image": "./assets/splash.png",
-      "resizeMode": "contain",
+      "image": "./assets/splash-android.png",
+      "resizeMode": "cover",
       "backgroundColor": "#ffffff"
     },
     "assetBundlePatterns": [
@@ -39,9 +39,10 @@
           }
         }
       ],
-       [
+      [
         "expo-image-picker"
-      ]
+      ],
+      "expo-secure-store"
     ],
     "extra": {
       "router": {

@@ -5,8 +5,8 @@ import Keypad from "./components/keypad/keypad";
 
 const Login = () => {
   return (
-    <SafeAreaView className="flex-1 justify-center items-center gap-y-16 px-5  bg-white">
-      <View className="items-center gap-y-5">
+    <SafeAreaView className="flex-1 justify-center items-center gap-y-10 px-5  bg-white">
+      <View className="items-center gap-y-2">
         <View className="w-24 h-24 justify-center rounded-full border-2 border-neutral-100 items-center   ">
           <Image
             source={{

@@ -13,8 +13,8 @@ const Field = ({
   const [togglePassword, SetTogglePassword] = useState(isHidden);
   return (
     <View className="gap-y-2 ">
-      {label && <Text className="text-lg font-pmedium  ">{label}</Text>}
-      <View className="w-full flex-row items-center bg-neutral-50 border border-neutral-400  p-3 px-4 rounded-xl">
+      {label && <Text className="text-base font-pmedium  ">{label}</Text>}
+      <View className="w-full flex-row items-center bg-neutral-50 border border-neutral-200  p-2 px-4 rounded-md">
         <TextInput
           keyboardType={isNumber ? "numeric" : "ascii-capable"}
           className="w-full text-base  font-plight"
@@ -32,7 +32,7 @@ const Field = ({
             }}
             className=" right-5  "
           >
-            <LucideIcon name={"Eye"} color={"black"} size={20} />
+            <LucideIcon name={"Eye"} color={"gray"} size={20} strokeWidth={1.9} />
           </Pressable>
         )}
       </View>

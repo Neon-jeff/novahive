@@ -6,7 +6,7 @@ import Icon from "../components/icons/lucide";
 import image from "../../assets/images/onboarding/account-type.png";
 import { router } from "expo-router";
 const AccountType = () => {
-  let [IsFreelancer, SetIsFreelancer] = useState(null);
+  let [IsFreelancer, SetIsFreelancer] = useState(false);
   return (
     <SafeAreaView
       className=" justify-center items-center flex-1 bg-white"
@@ -19,12 +19,12 @@ const AccountType = () => {
           Select account type
         </Text>
       </View>
-      <View className=" w-full items-center gap-y-5">
+      <View className=" flex-row justify-center  w-full items-center gap-x-5">
         <Pressable
           onPress={() => {
             SetIsFreelancer(false);
           }}
-          className={`flex-row items-center  justify-center  py-3  w-3/5 ${
+          className={`flex-row items-center  justify-center  py-3 w-1/3  ${
             IsFreelancer === false ? "bg-cyan-100" : "bg-gray-50"
           } rounded-lg`}
         >
@@ -42,7 +42,7 @@ const AccountType = () => {
           onPress={() => {
             SetIsFreelancer(true);
           }}
-          className={`flex-row items-center  justify-center  py-3  w-3/5 ${
+          className={`flex-row items-center  justify-center  py-3  w-1/3 ${
             IsFreelancer === true ? "bg-cyan-100" : "bg-gray-50"
           } rounded-lg`}
         >

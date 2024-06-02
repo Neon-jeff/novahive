@@ -3,7 +3,7 @@ import React from "react";
 import { Redirect } from "expo-router";
 
 const RedirectOnboarding = () => {
-  return <Redirect href={"/(onboarding)/screen-1"} />;
+  return <Redirect href={"/no-auth"} />;
 };
 
 export default RedirectOnboarding;

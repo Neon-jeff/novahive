@@ -14,6 +14,7 @@ import Button from "../components/buttons/button";
 import { SafeAreaView } from "react-native-safe-area-context";
 import * as ImagePicker from "expo-image-picker";
 import Checkbox from "expo-checkbox";
+import Back from "../components/Navigators/Back";
 
 const PersonalInfo = () => {
   let [checkBox, setCheckBox] = useState(false);
@@ -30,24 +31,20 @@ const PersonalInfo = () => {
     }
   };
   return (
-    <SafeAreaView className="px-5 bg-white   gap-y-5  flex-1">
-      <ScrollView contentContainerStyle={{ paddingTop: 10 }} showsVerticalScrollIndicator={false}>
+    <SafeAreaView className="px-5 bg-white pt-5   gap-y-5  flex-1">
+      <ScrollView
+        contentContainerStyle={{ paddingTop: 10, gap: 20 }}
+        showsVerticalScrollIndicator={false}
+      >
         {/* <Image source={image} resizeMode="contain" className="w-full h-1/3" /> */}
-        <View className="  gap-y-5 ">
-          <Pressable
-            onPress={() => {
-              router.push("(register)/create-pin");
-            }}
-            className="w-10 h-10 rounded-full bg-neutral-100 flex-row items-center justify-center  "
-          >
-            <Icon name={"ChevronLeft"} size={25} color={"black"} />
-          </Pressable>
+        <View className="" style={{ gap: 10 }}>
+          <Back />
           <Text className=" text-2xl  font-psemibold">
             Personal Information
           </Text>
         </View>
         <View className=" " style={{ gap: 20 }}>
-          <View className="gap-y-2">
+          <Pressable className="gap-y-2" onPress={uploadImage}>
             <View className="bg-neutral-100 w-14 h-14 self-center rounded-full justify-center items-center">
               {image ? (
                 <Image
@@ -59,14 +56,14 @@ const PersonalInfo = () => {
                 <Icon name={"UserRound"} size={25} color={"#0A2647"} />
               )}
             </View>
-            <Pressable
-              onPress={uploadImage}
+            <View
+              
               className="self-center flex-row gap-x-1"
             >
               <Icon name={"ImagePlus"} size={15} color={"#0A2647"} />
               <Text className="font-pregular">Upload profile image</Text>
-            </Pressable>
-          </View>
+            </View>
+          </Pressable>
           <Field label={"Nickname"} />
           <Field label={"Email Address"} />
           <Field label={"Skill"} />

@@ -11,13 +11,13 @@ const TabIcon = ({ label, focused, color, icon }) => {
         name={icon}
         size={focused ? 25 : 20}
         color={color}
-        strokeWidth={focused ? 2.9 : 2.5}
+        strokeWidth={focused ? 2.2 : 2.5}
       />
       <Text
         className={`${
           focused
-            ? `text-base font-pbold text-[#0760c6]`
-            : " text-sm font-pmedium text-[#adb2b3]"
+            ? `text-base font-pbold text-primary`
+            : " hidden"
         }`}
       >
         {label}
@@ -44,7 +44,7 @@ const TabsLayout = () => {
           borderWidth: 0,
         },
         tabBarInactiveTintColor: "#adb2b3",
-        tabBarActiveTintColor: "#0760c6",
+        tabBarActiveTintColor: "#0A2647",
       }}
     >
       <Tabs.Screen
@@ -102,7 +102,7 @@ const TabsLayout = () => {
           tabBarIcon: ({ color, focused }) => (
             <TabIcon
               label={"Projects"}
-              icon={"ThumbsUp"}
+              icon={"SquareGanttChart"}
               color={color}
               focused={focused}
             />
