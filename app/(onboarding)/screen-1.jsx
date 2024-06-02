@@ -89,7 +89,7 @@ const OnboardingScreenOne = () => {
             onPress={() => {
               if (index == 2) {
                 router.push("/(register)/account-type");
-                SaveValue('onboardingComplete',"true")
+                SaveValue("onboardingComplete", "true");
                 return;
               }
               SetIndex(index + 1);
@@ -105,7 +105,7 @@ const OnboardingScreenOne = () => {
           </Pressable>
         </View>
       </View>
-      <Link href={"(tabs)/home/"} asChild>
+      <Link href={"/(register)/account-type"} asChild>
         <Pressable className="absolute right-5 top-16 px-5 py-2 rounded-full bg-blue-100">
           <Text className="font-psemibold text-lg text-primary">Skip</Text>
         </Pressable>
