@@ -10,8 +10,8 @@ const LoginPassword = () => {
   return (
     <SafeAreaView className="px-5 bg-white py-10 justify-between  gap-y-5  flex-1">
       <View className="self-start gap-y-2"></View>
-      <View className=" " style={{ gap: 20 }}>
-        <Text className="self-start text-3xl    font-pbold">Login</Text>
+      <View className="" style={{ gap: 20 }}>
+        <Text className="self-start text-3xl font-pbold">Login</Text>
         <Field label={"Email"} isNumber={true} maxLength={4} />
         <Field
           label={"Password"}
